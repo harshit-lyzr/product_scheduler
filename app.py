@@ -29,8 +29,8 @@ st.image(image, width=150)
 
 # App title and introduction
 st.title("Product Scheduler👷‍")
-st.sidebar.markdown("## Welcome to the Product Scheduler!")
-st.sidebar.markdown("In this App you need to Upload Nit sketch of your product. This app will gives you Project Planning,Initiation and Schedule Development")
+st.markdown("## Welcome to the Product Scheduler!")
+st.markdown("In this App you need to Upload Nit sketch of your product. This app will gives you Project Planning,Initiation and Schedule Development")
 
 load_dotenv()
 api = os.getenv("OPENAI_API_KEY")
