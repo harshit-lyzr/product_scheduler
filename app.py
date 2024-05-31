@@ -6,7 +6,7 @@ import base64
 import os
 
 st.set_page_config(
-    page_title="Construction Planner",
+    page_title="Product Scheduler",
     layout="centered",  # or "wide"
     initial_sidebar_state="auto",
     page_icon="lyzr-logo-cut.png",
@@ -27,9 +27,9 @@ image = Image.open("lyzr-logo.png")
 st.image(image, width=150)
 
 # App title and introduction
-st.title("Construction Planner👷‍")
-st.sidebar.markdown("## Welcome to the Construction Planner!")
-st.sidebar.markdown("In this App you need to Upload Your Construction map and It can generate Construction planning and Additional Consideration Like Material Management,Labor Management or etc.")
+st.title("Product Scheduler👷‍")
+st.sidebar.markdown("## Welcome to the Product Scheduler!")
+st.sidebar.markdown("In this App you need to Upload Nit sketch of your product. This app will gives you Project Planning,Initiation and Schedule Development")
 
 api = st.sidebar.text_input("Enter Your OPENAI API KEY HERE",type="password")
 
