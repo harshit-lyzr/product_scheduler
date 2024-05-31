@@ -4,6 +4,7 @@ from PIL import Image
 import utils
 import base64
 import os
+from dotenv import load_dotenv
 
 st.set_page_config(
     page_title="Product Scheduler",
@@ -31,12 +32,11 @@ st.title("Product Scheduler👷‍")
 st.sidebar.markdown("## Welcome to the Product Scheduler!")
 st.sidebar.markdown("In this App you need to Upload Nit sketch of your product. This app will gives you Project Planning,Initiation and Schedule Development")
 
-api = st.sidebar.text_input("Enter Your OPENAI API KEY HERE",type="password")
+load_dotenv()
+api = os.getenv("OPENAI_API_KEY")
 
-if api:
-        openai_4o_model = GPTVISION(api_key=api,parameters={})
-else:
-        st.sidebar.error("Please Enter Your OPENAI API KEY")
+
+openai_4o_model = GPTVISION(api_key=api,parameters={})
 
 data = "data"
 os.makedirs(data, exist_ok=True)
